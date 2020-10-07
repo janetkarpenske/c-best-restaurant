@@ -1,12 +1,11 @@
-
 using Microsoft.EntityFrameworkCore;
 
-namespace ToDoList.Models
+namespace BestRest.Models
 {
-  public class ToDoListContext : DbContext
+  public class BestRestContext : DbContext
   {
-    public DbSet<Item> Items { get; set; }
-
-    public ToDoListContext(DbContextOptions options) : base(options) { }
+    public virtual DbSet<Category> Categories { get; set; }
+    public DbSet<Restaurant> Restaurants { get; set; }
+    public BestRestContext(DbContextOptions options) : base(options) { }
   }
 }
