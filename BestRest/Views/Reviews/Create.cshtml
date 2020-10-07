@@ -1,0 +1,33 @@
+@{
+  Layout = "_Layout";
+}
+
+@model BestRest.Models.Review
+
+<h4>Add a new Review:</h4>
+
+@using (Html.BeginForm())
+{
+    <h4>Enter A Title For A Review:</h4>
+    @Html.LabelFor(model => model.Title)
+    @Html.TextBoxFor(model => model.Title, 
+    new {@required="required"})
+
+    <h4>Enter A Name For A Review:</h4>
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, 
+    new {@required="required"})
+
+
+    <h4>What restaurant is this for?</h4>
+    @Html.LabelFor(model => model.Restaurant)
+    @Html.DropDownList("RestaurantId")
+
+    <h4>Write Your Review:</h4>
+    @Html.LabelFor(model => model.Content)
+    @Html.TextBoxFor(model => model.Content, 
+    new {@required="required"})
+
+    <input type="submit" value="Add Review" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all Reviews", "Index")</p>

@@ -19,7 +19,7 @@ namespace BestRest.Controllers
     {
       List<Category> model = _db.Categories.ToList();
       return View(model);
-    }
+    }    
 
     public ActionResult Create()
     {
@@ -36,7 +36,7 @@ namespace BestRest.Controllers
 
     public ActionResult Details(int id)
     {
-      Category thisCategory = _db.Categories.FirstOrDefault(category => category.CategoryId == id);
+      Category thisCategory = _db.Categories.Include(category => category.Restaurants).FirstOrDefault(category => category.CategoryId == id);
       return View(thisCategory);
     }
 

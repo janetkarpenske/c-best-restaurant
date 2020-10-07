@@ -9,6 +9,6 @@ namespace BestRest.Models
     public string Name { get; set; }
     public string Content { get; set; }
     public int RestaurantId { get; set; }
-    public virtual Category Restaurant { get; set; }
+    public virtual Restaurant Restaurant { get; set; }
   }
 }

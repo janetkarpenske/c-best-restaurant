@@ -45,7 +45,7 @@ namespace BestRest.Controllers
     public ActionResult Edit(int id)
     {
       var thisReview = _db.Reviews.FirstOrDefault(reviews => reviews.ReviewId == id);
-      ViewBag.RestuarantId = new SelectList(_db.Restaurants, "RestuarantId", "Name");
+      ViewBag.RestaurantId = new SelectList(_db.Restaurants, "RestaurantId", "Name");
       return View(thisReview);
     }
 
