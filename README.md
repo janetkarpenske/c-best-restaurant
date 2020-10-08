@@ -1,8 +1,8 @@
-# Project Name
+# Best Restaurants
 
-#### Brief Description. Created On: mm/dd/yyyy, Updated Last: mm/dd/yyyy
+#### Brief Description. Created On: 10/07/2020, Updated Last: 10/08/2020
 
-#### By Janet Karpenske
+#### By Janet Karpenske, Jeff Dinsmore, Michael Watts & Ben Stoller
 
 ## Description
 
@@ -40,4 +40,4 @@ Not Applicable
 
 This software is licensed under the MIT license.
 
-Copyright (c) 2016 **Janet Karpenske** _Project Name_
+Copyright (c) 2016 **Janet Karpenske, Jeff Dinsmore, Michael Watts & Ben Stoller** _Best Restaurants_

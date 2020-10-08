@@ -1,7 +1,7 @@
 @{
   Layout = "_Layout";
 }
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 @model BestRest.Models.Review
 
 <h2>Review Info</h2>
@@ -9,6 +9,23 @@
 <h3>@Html.DisplayNameFor(model => model.Title): @Html.DisplayFor(model => model.Title)</h3>
 <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
 <h4>@Html.DisplayNameFor(model => model.Content): @Html.DisplayFor(model => model.Content)</h4>
+
+<h4>Star Rating:
+
+@for (int i=1;i<=@Model.Stars;i++)
+{
+  <span class="fa fa-star checked"></span>
+}
+@for (int i=1;i<=5-@Model.Stars;i++)
+{
+  <span class="fa fa-star"></span>
+}
+</h4>
+
+@* <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span> *@
 
 <p>@Html.ActionLink("Back to review list", "Index")</p>
 <p>@Html.ActionLink("Edit Review Info", "Edit", new { id = Model.ReviewId })</p>

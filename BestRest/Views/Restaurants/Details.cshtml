@@ -1,12 +1,23 @@
 @{
   Layout = "_Layout";
 }
-
+@using BestRest.Models;
 @model BestRest.Models.Restaurant
 
 <h2>Restaurant Info</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+
+<strong><h2>@Html.DisplayFor(model => model.Name)</h2></strong>
+<strong><h3>@Html.DisplayFor(model => model.Category)</h3></strong>
+
+<h4>Reviews:</h4>
+<ul>
+@foreach (Review review in @Model.Reviews)
+{
+  
+  <li>@Html.ActionLink($"{review.Title}", "Details", "Reviews", new { id = review.ReviewId })</li>
+}
+</ul>
 <p>@Html.ActionLink("Back to restaurant list", "Index")</p>
 <p>@Html.ActionLink("Edit Restaurant Info", "Edit", new { id = Model.RestaurantId })</p>
 <p>@Html.ActionLink("Delete Restaurant", "Delete", new { id = Model.RestaurantId })</p>

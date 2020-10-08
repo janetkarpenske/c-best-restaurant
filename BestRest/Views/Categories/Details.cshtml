@@ -5,9 +5,9 @@
 @using BestRest.Models;
 @model BestRest.Models.Category;
 
-<h2>Category Details</h2>
+<h2>@Html.DisplayFor(model => model.Name)</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h3>Restaurants:</h3>
 
 <ul>
 @if (@Model.Restaurants.Count == 0)
@@ -17,8 +17,14 @@
 
 @foreach (Restaurant restaurant in @Model.Restaurants)
 {
-  <li>Name: @restaurant.Name</li>
+  <li>@Html.ActionLink($"{restaurant.Name}", "Details", "Restaurants", new { id = restaurant.RestaurantId })</li>
+  @* <li>Name: @restaurant.Name</li> *@
+  
 }
+@* @foreach (Review review in @Model.Reviews)
+{
+  <li>@Html.ActionLink($"{review.Title}", "Details", "Reviews", new { id = review.ReviewId })</li>
+} *@
 </ul>
 
 <p>@Html.ActionLink("Back to categories", "Index")</p>

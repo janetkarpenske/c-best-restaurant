@@ -1,8 +1,21 @@
 @{
-  Layout = "_Layout";
+  Layout = "_LayoutHome";
 }
-
-<h1>Best Restaurants!</h1>
-<p>@Html.ActionLink("See all categories", "Index", "Categories")</p>
-<p>@Html.ActionLink("See all Restaurants", "Index", "Restaurants")</p>
-
+<div class="full-width">
+<div class="hero-image">
+  <div class="hero-text">
+          <h1 class="whiteText">Best Restaurants!</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <p>@Html.ActionLink("See all categories", "Index", "Categories", null, new { @class = "btn btn-info btn-large" })</p>
+        </div>
+        <div class="col-md-4">
+          <p>@Html.ActionLink("See all Restaurants", "Index", "Restaurants", null, new { @class = "btn btn-info btn-large" })</p>
+        </div>
+      <div class="col-md-4">
+          <p>@Html.ActionLink("Show all Reviews", "Index", "Reviews", null, new { @class = "btn btn-info btn-large" })</p>
+        </div>
+      </div>
+  </div>
+</div>
+</div>

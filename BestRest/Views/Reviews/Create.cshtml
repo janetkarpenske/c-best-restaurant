@@ -28,6 +28,14 @@
     @Html.TextBoxFor(model => model.Content, 
     new {@required="required"})
 
+    
+    <h4>How many Stars (1-5):</h4>
+    @Html.LabelFor(model => model.Stars)
+    @Html.TextBoxFor(model => model.Stars, 
+    new {@required="required", @type = "number", @min = "1", @max = "5"})
+
+
+
     <input type="submit" value="Add Review" class="btn btn-default" />
 }
 <p>@Html.ActionLink("Show all Reviews", "Index")</p>

@@ -68,5 +68,13 @@ namespace BestRest.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    [HttpPost]
+    public ActionResult Index(string name)
+    {
+      List<Category> model = _db.Categories.Where(x => x.Name.Contains(name)).ToList();
+      List<Category> SortedList = model.OrderBy(o => o.Name).ToList();
+      return View("Index", SortedList);
+    }
   }
 }
