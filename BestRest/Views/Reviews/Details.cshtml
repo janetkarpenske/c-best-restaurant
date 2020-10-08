@@ -9,9 +9,7 @@
 <h3>@Html.DisplayNameFor(model => model.Title): @Html.DisplayFor(model => model.Title)</h3>
 <h4>By: @Html.DisplayFor(model => model.Name)</h4>
 <h4>Review: @Html.DisplayFor(model => model.Content)</h4>
-
 <h4>Star Rating:
-
 @for (int i=1;i<=@Model.Stars;i++)
 {
   <span class="fa fa-star checked"></span>
@@ -21,7 +19,6 @@
   <span class="fa fa-star"></span>
 }
 </h4>
-
 <br>
 <p>@Html.ActionLink("Back to review list", "Index", null, null, new { @class = "btn btn-info btn-sm" })</p>
 <p>@Html.ActionLink("Edit Review Info", "Edit", null, new { id = Model.ReviewId }, new { @class = "btn btn-info btn-sm"})</p>

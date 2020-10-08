@@ -5,23 +5,16 @@
 @model BestRest.Models.Restaurant
 
 <h2>Edit</h2>
-
 <h4>Edit this restaurant: @Html.DisplayFor(model => model.Name)</h4>
-
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.RestaurantId)
-
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name, 
     new {@required="required"})
-
     @Html.LabelFor(model => model.Category)
     @Html.DropDownList("CategoryId", null, "Please Select", htmlAttributes: new{required = "Please select a restaurant"})
-
     <input type="submit" value="Save"  class="btn btn-info btn-sm"/>
-
-    @* <p>@Html.ActionLink("Delete Restaurant", "Delete", null, new { id = Model.RestaurantId }, new { @class = "btn btn-info btn-sm" })</p> *@
 }
 <br>
 <p>@Html.ActionLink("Back to restaurant list", "Index", null, new { id=Model.RestaurantId }, new { @class = "btn btn-info btn-sm" })</p>

@@ -7,8 +7,6 @@ namespace BestRest.Models
     public virtual DbSet<Category> Categories { get; set; }
     public virtual DbSet<Restaurant> Restaurants { get; set; }
     public virtual DbSet<Review> Reviews { get; set; }
-    public BestRestContext(DbContextOptions options) : base(options) { }
-
-    
+    public BestRestContext(DbContextOptions options) : base(options) { }    
   }
 }

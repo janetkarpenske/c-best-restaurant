@@ -8,25 +8,17 @@
 <h2>@Html.DisplayFor(model => model.Name)</h2>
 <hr />
 <h3>Restaurants:</h3>
-
 <ul>
 @if (@Model.Restaurants.Count == 0)
 {
-  <p>no restaurants found</p>
+  <p>No Restaurants Found</p>
 }
-
 @foreach (Restaurant restaurant in @Model.Restaurants)
 {
-  <li>@Html.ActionLink($"{restaurant.Name}", "Details", "Restaurants", new { id = restaurant.RestaurantId })</li>
-  @* <li>Name: @restaurant.Name</li> *@
-  
+  <li>@Html.ActionLink($"{restaurant.Name}", "Details", "Restaurants", new { id = restaurant.RestaurantId })</li>  
 }
-@* @foreach (Review review in @Model.Reviews)
-{
-  <li>@Html.ActionLink($"{review.Title}", "Details", "Reviews", new { id = review.ReviewId })</li>
-} *@
 </ul>
 <br>
-<p>@Html.ActionLink("Back to cuisines", "Index", null, null, new { @class = "btn btn-info btn-sm" })</p>
+<p>@Html.ActionLink("Back To Cuisines", "Index", null, null, new { @class = "btn btn-info btn-sm" })</p>
 <p>@Html.ActionLink("Edit Cuisine", "Edit", null, new { id = Model.CategoryId}, new { @class = "btn btn-info btn-sm" }) </p>
 <p>@Html.ActionLink("Delete Cuisine", "Delete", null, new { id = Model.CategoryId}, new { @class = "btn btn-info btn-sm" })</p>
