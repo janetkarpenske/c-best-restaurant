@@ -38,7 +38,7 @@ namespace BestRest.Controllers
 
     public ActionResult Details(int id)
     {
-      Restaurant thisRestaurant = _db.Restaurants.Include(restaurant => restaurant.Reviews).FirstOrDefault(restaurant => restaurant.RestaurantId == id);
+      Restaurant thisRestaurant = _db.Restaurants.Include(restaurant => restaurant.Reviews).Include(restaurant => restaurant.Category).FirstOrDefault(restaurant => restaurant.RestaurantId == id);
       return View(thisRestaurant);
     }
 
@@ -72,7 +72,7 @@ namespace BestRest.Controllers
       return RedirectToAction("Index");
     }
     
-    [HttpPost]
+    [HttpPost] //restaurant search bar functionality
     public ActionResult Index(string name)
     {
       List<Restaurant> model = _db.Restaurants.Include(restaurants => restaurants.Category).Where(x => x.Name.Contains(name)).ToList();      

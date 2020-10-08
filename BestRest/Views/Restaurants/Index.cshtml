@@ -16,17 +16,13 @@
 {
   <li>@Html.ActionLink($"{restaurant.Name}", "Details", new { id = restaurant.RestaurantId }) | @restaurant.Category.Name</li>
 }
-
-<p>@Html.ActionLink("Add new restaurant", "Create")</p>
-
-
-
-
+<br>
 @using (Html.BeginForm())
 {
   @Html.Label("Filter Restaurants by Name")
   @Html.TextBox("Name")
-  <input type="submit" value="search" />
+  <input type="submit" value="Search" class="btn btn-info btn-sm"/> //value is the button text
 }
-
-<p>@Html.ActionLink("Show all Restaurants", "Index")</p>
+<br>
+<p>@Html.ActionLink("Add new restaurant", "Create", null, null, new { @class = "btn btn-info btn-sm" })</p>
+<p>@Html.ActionLink("Show all Restaurants", "Index", null, null, new { @class = "btn btn-info btn-sm" })</p>

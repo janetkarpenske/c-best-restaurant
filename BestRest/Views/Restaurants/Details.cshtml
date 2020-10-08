@@ -1,24 +1,40 @@
 @{
   Layout = "_Layout";
 }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 @using BestRest.Models;
 @model BestRest.Models.Restaurant
 
-<h2>Restaurant Info</h2>
+<h3>Restaurant Info</h3>
 <hr />
 
 <strong><h2>@Html.DisplayFor(model => model.Name)</h2></strong>
-<strong><h3>@Html.DisplayFor(model => model.Category)</h3></strong>
+
+<h4>Cuisine Style: @Html.DisplayFor(model => model.Category.Name)</h4>
 
 <h4>Reviews:</h4>
 <ul>
 @foreach (Review review in @Model.Reviews)
 {
+
   
-  <li>@Html.ActionLink($"{review.Title}", "Details", "Reviews", new { id = review.ReviewId })</li>
+  <li>@Html.ActionLink($"{review.Title}", "Details", "Reviews", new { id = review.ReviewId }) |
+  @for (int i=1;i<=@review.Stars;i++)
+  {
+    <span class="fa fa-star checked"></span>
+  }
+  @for (int i=1;i<=5-@review.Stars;i++)
+  {
+    <span class="fa fa-star"></span>
+  }    
+  </li>
 }
 </ul>
-<p>@Html.ActionLink("Back to restaurant list", "Index")</p>
-<p>@Html.ActionLink("Edit Restaurant Info", "Edit", new { id = Model.RestaurantId })</p>
-<p>@Html.ActionLink("Delete Restaurant", "Delete", new { id = Model.RestaurantId })</p>
-<p>@Html.ActionLink("Add Review", "Create", "Reviews")</p>
+<br>
+<p>@Html.ActionLink("Add Review", "Create", "Reviews", null, new { @class = "btn btn-info btn-sm" })</p>
+<p>@Html.ActionLink("Back to restaurant list", "Index", null, null, new { @class = "btn btn-info btn-sm" })</p>
+<p>@Html.ActionLink("Edit Restaurant Info", "Edit", null, new { id = Model.RestaurantId }, new { @class = "btn btn-info btn-sm" })</p>
+<p>@Html.ActionLink("Delete Restaurant", "Delete", null, new { id = Model.RestaurantId }, new { @class = "btn btn-info btn-sm" })</p>
+@* <input type="button" class="btn btn-info btn-sm" title="myButton" value="Delete Restaurant" onclick="location.href='@Url.Action("Delete Restaurant", "Delete", new { id = Model.RestaurantId })'" /> *@
+
+

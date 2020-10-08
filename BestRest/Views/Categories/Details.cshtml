@@ -26,7 +26,7 @@
   <li>@Html.ActionLink($"{review.Title}", "Details", "Reviews", new { id = review.ReviewId })</li>
 } *@
 </ul>
-
-<p>@Html.ActionLink("Back to categories", "Index")</p>
-<p>@Html.ActionLink("Edit Category", "Edit", new { id = Model.CategoryId })</p>
-<p>@Html.ActionLink("Delete Category", "Delete", new { id = Model.CategoryId })</p>
+<br>
+<p>@Html.ActionLink("Back to cuisines", "Index", null, null, new { @class = "btn btn-info btn-sm" })</p>
+<p>@Html.ActionLink("Edit Cuisine", "Edit", null, new { id = Model.CategoryId}, new { @class = "btn btn-info btn-sm" }) </p>
+<p>@Html.ActionLink("Delete Cuisine", "Delete", null, new { id = Model.CategoryId}, new { @class = "btn btn-info btn-sm" })</p>

@@ -3,7 +3,7 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(206, 223, 228);
+  background-color: rgb(214, 214, 214);
 }
 
 .container {
@@ -25,7 +25,7 @@ body, html {
 
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.lifestyleasia.com/wp-content/uploads/sites/3/2020/05/04113706/monika-grabkowska-P1aohbiT-EY-unsplash-1350x900.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://d1e00ek4ebabms.cloudfront.net/production/8669b7f0-b3bb-4c07-ad74-88af722d110b.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,7 +38,13 @@ body, html {
 h1 {
   font-family: 'Russo One', sans-serif;
   text-align: center;
-  font-size: 60px;
+  font-size: 90px;
+}
+
+h4 {
+  font-family: 'Russo One',
+  sans-serif;
+ 
 }
 
 .whiteText {
@@ -61,17 +67,11 @@ li a {
 }
 
 .btn {
-  background-color: orangered;
+  background-color: rgb(255, 0, 0);
   border: none;
 }
 
-.edit-item-link {
-  
-  background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fthenounproject.com%2Fterm%2Fhome-button%2F&psig=AOvVaw2sjCDk32uDLqrTms2IyWf3&ust=1602263187782000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJCFoNS9pewCFQAAAAAdAAAAABAH") no-repeat top left;
-  display: block;
-  width: 16px;
-  height: 16px;
- }
+
 
 div#header {
   height: 80px;
@@ -80,14 +80,13 @@ div#header {
   width: 32px;
   margin-top: 4px;
 }
-
 ul#headerList {
   list-style-type: none;
   margin: 0;
   padding: 0;
   padding-right: 12%;
   overflow: hidden;
-  background-color: rgb(0, 131, 163);
+  background-color: rgb(245, 2, 2);
 }
 li#headerUl {
   float: right;
@@ -105,6 +104,34 @@ li#headerUl a {
 }
 li#headerUl a:hover {
   background-color: rgb(192, 64, 5);
+}
+div#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:  rgb(0, 0, 0);
+  padding:10px;
+  height: 60px;
+}
+ul#footerList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 12%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+}
+li#footerUl {
+  float: right;
+}
+li#footerUl a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 .checked {
@@ -133,12 +160,22 @@ li#headerUl a:hover {
   margin: 0px 5px 0px 5px;
 }
 
-@media screen and (max-width: 800px) {
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 860px) {
   ul#headerList {
     list-style-type: none;
     margin: 0;
     padding: 0;
     padding-right: 5%;
+  }
+  li#homeImageUl {
+    margin-left: 5%;
   }
 }
 
@@ -170,4 +207,6 @@ li#headerUl a:hover {
   }
   li#headerUl a:hover {
     background-color:rgb(192, 64, 5);
+  }
+  
 }

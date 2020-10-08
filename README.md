@@ -6,7 +6,7 @@
 
 ## Description
 
-This program...
+Best Restaurants is a C#/CSHTML Website that allows you review your favorite restaurant along with defining their cuisine style. Go ahead submit those 5-star reviews! 
 
 ## Specifications
 | Description | Input | Output |
@@ -31,7 +31,7 @@ https://github.com/janetkarpenske
 
 ## Technologies Used
 
-C#, MVCTest, and Markdown.
+C#, MVCTest, MySql, CSHTML, CSS, Bootstrap and Markdown.
 
 ## Link To Active Site:
 Not Applicable

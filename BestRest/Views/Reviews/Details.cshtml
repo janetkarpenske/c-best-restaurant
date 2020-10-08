@@ -7,8 +7,8 @@
 <h2>Review Info</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Title): @Html.DisplayFor(model => model.Title)</h3>
-<h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
-<h4>@Html.DisplayNameFor(model => model.Content): @Html.DisplayFor(model => model.Content)</h4>
+<h4>By: @Html.DisplayFor(model => model.Name)</h4>
+<h4>Review: @Html.DisplayFor(model => model.Content)</h4>
 
 <h4>Star Rating:
 
@@ -22,11 +22,7 @@
 }
 </h4>
 
-@* <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-<span class="fa fa-star"></span> *@
-
-<p>@Html.ActionLink("Back to review list", "Index")</p>
-<p>@Html.ActionLink("Edit Review Info", "Edit", new { id = Model.ReviewId })</p>
-<p>@Html.ActionLink("Delete Review", "Delete", new { id = Model.ReviewId })</p>
+<br>
+<p>@Html.ActionLink("Back to review list", "Index", null, null, new { @class = "btn btn-info btn-sm" })</p>
+<p>@Html.ActionLink("Edit Review Info", "Edit", null, new { id = Model.ReviewId }, new { @class = "btn btn-info btn-sm"})</p>
+<p>@Html.ActionLink("Delete Review", "Delete", null, new { id = Model.ReviewId }, new { @class = "btn btn-info btn-sm"})</p>

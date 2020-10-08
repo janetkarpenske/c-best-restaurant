@@ -21,7 +21,7 @@
 
     <h4>What restaurant is this for?</h4>
     @Html.LabelFor(model => model.Restaurant)
-    @Html.DropDownList("RestaurantId")
+    @Html.DropDownList("RestaurantId", null, "Please Select", htmlAttributes: new{required = "Please select a restaurant"})
 
     <h4>Write Your Review:</h4>
     @Html.LabelFor(model => model.Content)
@@ -36,6 +36,7 @@
 
 
 
-    <input type="submit" value="Add Review" class="btn btn-default" />
+    <input type="submit" value="Add Review" class="btn btn-info btn-sm"/>
 }
-<p>@Html.ActionLink("Show all Reviews", "Index")</p>
+<br>
+<p>@Html.ActionLink("Show all Reviews", "Index", null, null, new { @class = "btn btn-info btn-sm" })</p>

@@ -27,7 +27,5 @@
   @* <li>@Html.ActionLink($"{review.Name}", "Details", new { id = review.ReviewId | })</li> *@
   @* <li>@review.Name</li> *@
 }
-
-<p>@Html.ActionLink("Add new review", "Create")</p>
-
-<p>@Html.ActionLink("Review", "Index")</p>
+<br>
+<p>@Html.ActionLink("Add new review", "Create", null, null, new { @class = "btn btn-info btn-sm" })</p>
