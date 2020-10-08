@@ -6,7 +6,7 @@
 
 ## Description
 
-Best Restaurants is a C#/CSHTML Website that allows you review your favorite restaurant along with defining their cuisine style. Go ahead submit those 5-star reviews! 
+Best Restaurants is a C#/CSHTML Website that allows you to review your favorite restaurant along with defining their cuisine style. Go ahead submit those 5-star reviews! 
 
 ## Setup/Installation Requirements
 
