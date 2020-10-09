@@ -12,7 +12,7 @@
     new {@required="required"}) 
 
     @Html.LabelFor(model => model.Category, "Cuisine")
-    @Html.DropDownList("CategoryId")
+    @Html.DropDownList("CategoryId", null, "Please Select", htmlAttributes: new{required = "Please select a category"})
 
     <input type="submit" value="Add new Restaurant" class="btn btn-info btn-sm" />
 }
